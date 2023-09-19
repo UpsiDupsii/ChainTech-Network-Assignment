@@ -1,0 +1,112 @@
+{% extends "base.html"%}
+{% block title %} Dynamic Content {% endblock %}
+{% block content%}
+{% load static%}
+<script src="{% static '/javascript/scripts.js' %}"> </script>
+<h2>Exercise: 3 - Adding Dynamic Content </h2>
+<!--Time card-->
+<div class="card" >
+  <div class="card-body">
+    <h3 class="card-title" id="card-title">Time</h3>
+    <h4 class="card-subtitle" id="card-subtitle">
+      Current Indian Standard Time is:
+    </h4>
+    <p class="card-text" onload="startTime()" id="time"></p>
+    <button class="btn" onclick="startTime()">Check Time</button>
+  </div>
+</div>
+
+<!--Weather card-->
+<div class="card" >
+  <div class="card-body">
+    <h3 class="card-title" id="card-title">Weather</h3>
+    <p>Enter any city name to avoid error &#40;This field must take string &#40;python str &#41; input &#41;</p>
+    <p>By default the value is <b><i>Hyderabad</i></b> please change to other city to check that city weather</p>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="city" id="city"value="Hyderabad" placeholder="Enter city name here...">
+        <input class="button" type="submit" value="Get Weather">
+        <div class="card" >
+            <div class="card-body">
+              {% comment %} {% if countrycode and coordinate and temp and pressure and humidity and main and description %} {% endcomment %}
+                <div><h4>Country code is: {{country_code}}</h4></div>
+                <div><h4>Coordinates &#40;Lon &amp; Lat &#41; are : {{coordinate}}</h4></div>
+                <div><h4>Temparature is: {{temp}}</h4></div>
+                <div><h4>Pressure is: {{pressure}}</h4></div>
+                <div><h4>Humidity in air is: {{humidity}}</h4></div>
+                <div><h4>Sky &#40;View&#41;: {{main}}</h4></div>
+                <div><h4>Description: {{description}} </h4></div>  
+            {% comment %} {% endif %} {% endcomment %}
+            </div>
+          </div>
+            
+
+    </form>
+
+  </div>
+</div>
+
+<style>
+    h2{
+        text-align: center; 
+        margin-top: 50px;
+    }
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    margin-left: 30%;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    padding: 50px;
+  }
+  .card:hover{
+    box-shadow: 0 8px 24px 0 rgba(0,0,0,0.2);
+    position: relative;
+    left: 0.5px;
+    top: 0.5px;
+  }
+  button{
+    border-radius: 5px;
+    background-color: #b7e5f8;
+    padding: 8px;
+  }
+  .button{
+    border-radius: 5px;
+    background-color: #b7e5f8;
+    padding: 8px;
+  }
+  .button:hover{
+    box-shadow: 0 8px 24px 0 rgba(0,0,0,0.2);
+    position: relative;
+    left: 1px;
+    top: 1px;
+  }
+  
+</style>
+
+
+<!--Javascript-->
+<script>
+    function startTime(){
+        const today = new Date();
+        let h = today.getHours();
+        let m = today.getMinutes();
+        let s = today.getSeconds();
+        h = checkTime(h);
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById("time").innerHTML ="HH:MM:SS  " + h + ":" + m + ":" + s;
+        setTimeout(startTime(), 1000)
+      }
+      function checkTime(i) {
+        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+        return i;
+      }
+</script>
+
+
+
+{%endblock%}

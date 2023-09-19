@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Setting Up a Simple Webpage{% endblock %}
+{% block content %}
+<div class="exercise-1 exercise">
+    <h2>Exercise 1</h2>
+    <h4>Setting Up a Simple Website</h4>
+        <p>As per the assignment task information in the github repository, this page contains Exercise 1 subtasks i.e., <b>Setting Up a Simple Website</b> by using a Header/Navbar and a Footer and some content which I want to display the explanation and paths to other exercises of the assignment</P>
+            <p>To go to Exercise 1</p>
+            <button class="btn"><a href="/">Click Here</a></button>
+        </div>
+    <div class="exercise-2 exercise">
+        <h2>Exercise 2</h2>
+        <h4>Creating a Python Web Server</h4>
+        <p>I created the Python Web Server Using Django Framework<br>
+        I configured URL routing and the paths takes you to their destinations <br>
+    Kindly check the urls.py, views.py, models.py and templates in my <button><a class="link" href="#">GitHub<i class="fa fa-github"></i></a></button></p>
+        <p>
+    </div>
+
+
+<style>
+    .exercise{
+        text-align: center;
+        margin: 50px 100px 50px 100px;
+        padding: 20px;
+    }
+    button{
+        border-radius: 5px;
+        background-color: #b7e5f8;
+        padding: 8px;
+      }
+    button:hover{
+        position: relative;
+        left: 1px;
+        top: 1px;
+        box-shadow: 0 8px 24px 0 rgba(0,0,0,0.2);
+    }
+    a{
+        text-decoration:none;
+        color: solid black;
+    }
+
+</style>
+{% endblock %}

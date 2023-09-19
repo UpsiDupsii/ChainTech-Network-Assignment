@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- loading static files using jinja  -->
+  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- adding link to display github icon and linkedin icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>{%block title%}{%endblock%}</title>
+    {% load static%}
+    <link rel="stylesheet" src="{%static '/css/style.css' %}">
+  </head>
+  <body>
+    <!--Header Section-->
+    <div class="containerhead">
+      <header class="header" id="header">
+        <nav class="navbar" id="navbar">
+          <a class="link" href="#">Vinay Kumar Duluri</a>
+          <span class="nav">
+            <ul>
+              <li class="list"><a class="link" href="/">Simple Webpage</a></li>
+              <li class="list"><a class="link" href="#">Exercise 2</a></li>
+              <li class="list"><a class="link" href="dynamic/">Dynamic Content</a></li>
+              <li class="list"><a class="link" href="#">Exercise 4</a></li>
+              <li class="list"><a class="link" href="#">Exercise 5</a></li>
+            </ul>
+          </span>
+        </nav>
+      </header>
+    </div>
+    <h1>Python Development Internship Assignment</h1>
+    <!--Content Section-->
+    {%block content%}
+    {% endblock %}
+     <!-- Footer Section-->
+    <div class="foot">
+        <footer class="footer">
+            <div class="name"><b>ChainTech Assignment</b></div>
+            <div class="stuff">
+                <ul class="container">
+                    <li class="lst"><b>Exercises</b></li>
+                    <li class="lst"><a class="link" href="/">Simple Webpage</a></li>
+                    <li class="lst"><a class="link" href="#">Exercise 2</a></li>
+                    <li class="lst"><a class="link" href="dynamic/">Dynamic Content</a></li>
+                    <li class="lst"><a class="link" href="#">Exercise 4</a></li>
+                    <li class="lst"><a class="link" href="#">Exercise 5</a></li>
+                  </ul>
+
+                <ul class="container">
+                    <li class="contact lst"><b>Contact Me</b></li>
+                    <li class="lst"><a class="link" href="mailto:vinay.f44@gmail.com">Email<i class="fa fa-envelope"></i></a></li>
+                    <li class="lst"><a class="link" href="#">LinkedIn<i class="fa fa-linkedin"></i></a></li>
+                </ul>
+
+                <ul class="container">
+                    <li class="contact lst"><b>My GitHub Resumé</b></li>
+                    <li class="lst"><a class="link" href="#">GitHub<i class="fa fa-github"></i></a></li>
+                    <li class="lst"><a class="link" href="#">LinkedIn<i class="fa fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+  </body>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <!-- Adding internal css for the page -->
+  <style>
+    body{
+        margin: 0%;
+        padding: 0%;
+        color: black;
+    }
+    .navbar{
+        background-color: #b7e5f8;
+    }
+    .link{
+        text-decoration: none;
+    }
+    .link:hover{
+        position: relative;
+        left: 2px;
+        top: 1px;
+        transition-delay: 20ms;
+    }
+    .nav{
+        display: inline-block;
+    }
+    .list{
+        display: inline-flex;
+        margin-left: 50px;    
+    }
+    h1{
+        text-align: center;
+        color: #1013a3;
+    }
+    .footer{
+        background-color: #b7e5f8;  
+        padding-bottom: 10px;  
+    }
+    .name{
+        text-align: center;
+        padding-top: 12px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .lst{
+        list-style-type: none;
+        padding: 5px;
+        
+    }
+    .stuff{
+        display: flex;
+        justify-content: center;
+        
+    }
+    .fa{
+        padding-left: 15px;
+    }
+    .container{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    
+    
+    
+
+  </style>
+</html>
