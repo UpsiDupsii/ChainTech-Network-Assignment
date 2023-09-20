@@ -7,6 +7,7 @@ def index(request):
     
     return render(request, "index.html")
 
+#Exercise-3
 def weatherAPI(request):
     if request.method == "POST":
         city = 0
@@ -28,3 +29,7 @@ def weatherAPI(request):
     else:
         data={}
     return render(request, "weatherAPI.html", data)
+
+#Exercise-4
+def forms(request):
+    return render(request, "forms.html")

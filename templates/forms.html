@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{%block title %}Form Handling
+{%endblock%}
+{%block content%}
+<div class="card-body">
+    <div class="forms">
+        <form method="POST">
+        {% csrf_token %}
+        <div class="fileds">
+             Name: <input class="inp" type="text" name="name" id="name" placeholder="">
+        </div>
+        <div class="fileds">
+            Email: <input class="inp" type="email" name="emai", id="email" placeholder="JohnDoe@ChainTech.com">
+        </div>
+        <div class="fileds">
+            Phone: <input class="inp" type="text" name="phone", id="phone" placeholder="Enter Phone Number">
+        </div>
+        <div class="fileds">
+            Description: <input class="inp" type="text" name="desc", id="desc" >
+        </div>
+        <div class="fields">
+            <input class="button" type="Submit" value="submit">
+        </form>
+    </div>
+</div>
+
+
+<!--Style.css-->
+<style>
+.forms{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fields{
+    margin: 10px;
+    padding: 25px;
+}
+.inp{
+    margin: 15px;
+}
+.button{
+    border-radius: 5px;
+    background-color: #b7e5f8;
+    padding: 8px;
+  }
+.button:hover{
+    position: relative;
+    left: 1px;
+    top: 1px;
+    box-shadow: 0 8px 24px 0 rgba(0,0,0,0.2);
+}
+</style>
+{%endblock%}
