@@ -10,7 +10,9 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <title>{%block title%}{%endblock%}</title>
+    <title>{%block title%}
+      {%endblock%}
+    </title>
     {% load static%}
     <link rel="stylesheet" src="{%static '/css/style.css' %}" />
   </head>
@@ -35,7 +37,7 @@
                 <a class="link" href="dynamic/">Dynamic Content</a>
               </li>
               <li class="list">
-                <a class="link" href="forms/">Form Handling</a>
+                <a class="link" href="{% url 'forms' %}">Form Handling</a>
               </li>
               <li class="list"><a class="link" href="#">Exercise 5</a></li>
             </ul>
@@ -74,11 +76,6 @@
             <li class="lst">
               <a class="link" href="mailto:vinay.f44@gmail.com"
                 >Email<i class="fa fa-envelope"></i
-              ></a>
-            </li>
-            <li class="lst">
-              <a class="link" href="#"
-                >LinkedIn<i class="fa fa-linkedin"></i
               ></a>
             </li>
           </ul>

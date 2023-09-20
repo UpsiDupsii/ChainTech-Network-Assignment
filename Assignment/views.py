@@ -35,6 +35,7 @@ def weatherAPI(request):
 def forms(request):
     data = {}
     if request.method=="POST":
+        
         name = request.POST.get("name")
         email = request.POST.get("email")
         phone = request.POST.get("phone")
@@ -49,4 +50,6 @@ def forms(request):
             "phone": phone,
             "desc": desc,
             }
+    
+        
     return render(request, "forms.html", data)
