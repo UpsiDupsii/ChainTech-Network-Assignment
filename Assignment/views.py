@@ -1,6 +1,7 @@
 from django.shortcuts import render
 import json
 import urllib
+from .models import SaveForms
 
 # Create your views here.
 def index(request):
@@ -32,4 +33,20 @@ def weatherAPI(request):
 
 #Exercise-4
 def forms(request):
-    return render(request, "forms.html")
+    data = {}
+    if request.method=="POST":
+        name = request.POST.get("name")
+        email = request.POST.get("email")
+        phone = request.POST.get("phone")
+        desc = request.POST.get("desc")
+        
+        save_data = SaveForms(name=name, email=email, phone=phone, desc=desc)
+        save_data.save()
+        
+        data = {
+            "name":name,
+            "email": email,
+            "phone": phone,
+            "desc": desc,
+            }
+    return render(request, "forms.html", data)

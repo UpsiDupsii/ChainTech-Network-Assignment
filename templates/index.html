@@ -1,64 +1,90 @@
-{% extends "base.html" %}
-{% block title %}Setting Up a Simple Webpage{% endblock %}
-{% block content %}
+{% extends "base.html" %} {% block title %}Setting Up a Simple Webpage
+{%endblock %} {% block content %}
 <div class="exercise-1 exercise">
-    <h2>Exercise 1</h2>
-    <h4>Setting Up a Simple Website</h4>
-        <p>As per the assignment task information in the github repository, this page contains Exercise 1 subtasks i.e., <b>Setting Up a Simple Website</b> by using a Header/Navbar and a Footer and some content which I want to display the explanation and paths to other exercises of the assignment</P>
-            <p>To go to Exercise 1</p>
-            <button class="btn"><a href="/">Click Here</a></button>
-        </div>
+  <h2>Exercise 1</h2>
+  <h4>Setting Up a Simple Website</h4>
+  <p>
+    As per the assignment task information in the github repository, this page
+    contains Exercise 1 subtasks i.e., <b>Setting Up a Simple Website</b> by
+    using a Header/Navbar and a Footer and some content which I want to display
+    the explanation and paths to other exercises of the assignment
+  </p>
+  <p>To go to Exercise 1</p>
+  <button class="btn"><a href="/">Click Here</a></button>
+</div>
 
+<div class="exercise-2 exercise">
+  <h2>Exercise 2</h2>
+  <h4>Creating a Python Web Server</h4>
+  <p>
+    I created the Python Web Server Using Django Framework<br />
+    I configured URL routing and the paths takes you to their destinations
+    <br />
+    Kindly check the urls.py, views.py, models.py and templates in my
+    <button>
+      <a
+        class="link"
+        href="https://github.com/UpsiDupsii/ChainTech-Network-Assignment"
+        target="_blank"
+        >GitHub<i class="fa fa-github"></i
+      ></a>
+    </button>
+  </p>
+  <p></p>
+</div>
 
-    <div class="exercise-2 exercise">
-        <h2>Exercise 2</h2>
-        <h4>Creating a Python Web Server</h4>
-        <p>I created the Python Web Server Using Django Framework<br>
-        I configured URL routing and the paths takes you to their destinations <br>
-    Kindly check the urls.py, views.py, models.py and templates in my <button><a class="link" href="https://github.com/UpsiDupsii/ChainTech-Network-Assignment" target="_blank">GitHub<i class="fa fa-github"></i></a></button></p>
-        <p>
-    </div>
+<div class="exercise-3 exercise">
+  <h2>Exercise 3</h2>
+  <h4>Adding Dynamic Content</h4>
+  <p>
+    I have added dynamic content to display <b>Current Date</b> in a html card
+    when you click the button and <br />
+    Another card will display the <b>Current Weather</b> of any
+    <b>location in the world</b>. To display the weather information like
+    location, co-ordinates, temperature, humidity, pressure, I have used API by
+    <b>OpenWeatherMap</b> <br />
+    My API key will be visible in the github repository :/
+  </p>
+  <p>
+    Click Here to Check Current Time and Current Weather that incorporates in
+    "weather.html" page
+  </p>
+  <button class="btn"><a href="dynamic/">Time &amp; Weather</a></button>
+</div>
 
-    <div class="exercise-3 exercise">
-        <h2>Exercise 3</h2>
-        <h4>Adding Dynamic Content</h4>
-            <p>I have added dynamic content to display <b>Current Date</b> in a html card when you click the button and <br>
-                Another card will display the <b>Current Weather</b> of any <b>location in the world</b>. To display the weather information like location, co-ordinates, temperature, humidity, pressure, I have used API by <b>OpenWeatherMap</b> <br>
-                My API key will be visible in the github repository :/ </p>
-                <p> Click Here to Check Current Time and Current Weather that incorporates in "weather.html" page</P>
-                <button class="btn"><a href="dynamic/">Time &amp; Weather</a></button>
-            </div>
-
-            <div class="exercise-4 exercise">
-                <h2>Exercise 4</h2>
-                <h4>Form Handling</h4>
-                <p> I have created a form using POST method so that when a user submits fields like name, email, phone, description etc then it will be stored in the database &lt;models.py&gt;<br>
-                    The stored data can be retrived at any time from the database.
-                    <button class="btn"><a href="/">Time &amp; Weather</a></button>
-                    </div>
-
+<div class="exercise-4 exercise">
+  <h2>Exercise 4</h2>
+  <h4>Form Handling</h4>
+  <p>
+    I have created a form using POST method so that when a user submits fields
+    like name, email, phone, description etc then it will be stored in the
+    database &lt;models.py&gt;<br />
+    The stored data can be retrived at any time from the database.
+    <button class="btn"><a href="/">Time &amp; Weather</a></button>
+  </p>
+</div>
 
 <style>
-    .exercise{
-        text-align: center;
-        margin: 50px 100px 50px 100px;
-        padding: 20px;
-    }
-    button{
-        border-radius: 5px;
-        background-color: #b7e5f8;
-        padding: 8px;
-      }
-    button:hover{
-        position: relative;
-        left: 1px;
-        top: 1px;
-        box-shadow: 0 8px 24px 0 rgba(0,0,0,0.2);
-    }
-    a{
-        text-decoration:none;
-        color: solid black;
-    }
-
+  .exercise {
+    text-align: center;
+    margin: 50px 100px 50px 100px;
+    padding: 20px;
+  }
+  button {
+    border-radius: 5px;
+    background-color: #b7e5f8;
+    padding: 8px;
+  }
+  button:hover {
+    position: relative;
+    left: 1px;
+    top: 1px;
+    box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.2);
+  }
+  a {
+    text-decoration: none;
+    color: solid black;
+  }
 </style>
+
 {% endblock %}

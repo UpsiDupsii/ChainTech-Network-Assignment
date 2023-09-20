@@ -3,30 +3,37 @@
 {%endblock%}
 {%block content%}
 <div class="card-body">
-    <div class="forms">
-        <form method="POST">
-        {% csrf_token %}
-        <div class="fileds">
-             Name: <input class="inp" type="text" name="name" id="name" placeholder="">
+    <div class="container-card">
+        <div class="forms">
+            <form action="{% url 'forms' %}" method="POST">
+            {% csrf_token %}
+            <div class="fileds">
+                Name: <input class="inp" type="text" name="name" id="name" placeholder="Eg: Dharmveersinh Jadeja">
+            </div>
+            <div class="fileds">
+                Email: <input class="inp" type="email" name="emai", id="email" placeholder="JohnDoe@ChainTech.com">
+            </div>
+            <div class="fileds">
+                Phone: <input class="inp" type="text" name="phone", id="phone" placeholder="Enter Phone Number">
+            </div>
+            <div class="fileds">
+                Description: <input class="inp" type="text" name="desc", id="desc" >
+            </div>
+            <div class="fields">
+                <input class="button" type="Submit" value="submit">
+            </form>
         </div>
-        <div class="fileds">
-            Email: <input class="inp" type="email" name="emai", id="email" placeholder="JohnDoe@ChainTech.com">
-        </div>
-        <div class="fileds">
-            Phone: <input class="inp" type="text" name="phone", id="phone" placeholder="Enter Phone Number">
-        </div>
-        <div class="fileds">
-            Description: <input class="inp" type="text" name="desc", id="desc" >
-        </div>
-        <div class="fields">
-            <input class="button" type="Submit" value="submit">
-        </form>
     </div>
 </div>
 
 
 <!--Style.css-->
 <style>
+.container-card{
+    margin-left: 35%;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
 .forms{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
@@ -34,6 +41,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.forms:hover{
+    box-shadow: 0 8px 24px 0 rgba(0,0,0,0.2);
+    position: relative;
+    left: 0.5px;
+    top: 0.5px;
 }
 .fields{
     margin: 10px;
