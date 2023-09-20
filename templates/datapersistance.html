@@ -1,0 +1,34 @@
+{% extends "base.html"%}
+{% block title %}
+Data Persistance
+{%endblock%}
+{% block content%}
+<!--Fetching data from the database-->
+<h1>The data fetched from the database is</h1>
+<table calss="table">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Description</th>
+    </tr>
+    {% for data in context %}
+    <tr>
+        <td>{{data.name}}</td>
+        <td>{{data.email}}</td>
+        <td>{{data.phone}}</td>
+        <td>{{data.desc}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<!--Style css-->
+<style>
+    .table{
+        padding: 50px;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+    }
+</style>
+{% endblock %}

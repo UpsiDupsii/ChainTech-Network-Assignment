@@ -6,4 +6,5 @@ urlpatterns = [
     path("", views.index, name="index"),
     path("dynamic/", views.weatherAPI, name="weatherAPI"),
     path("forms/", views.forms, name="forms"),
+    path("datapersistance", views.datapersistance, name="datapersistance"),
 ]

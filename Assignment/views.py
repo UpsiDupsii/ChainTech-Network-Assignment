@@ -53,3 +53,8 @@ def forms(request):
     
         
     return render(request, "forms.html", data)
+
+#Exercise 5
+def datapersistance(request):
+    context = SaveForms.objects.all().values()
+    return render(request, "datapersistance.html", {"context": context})
